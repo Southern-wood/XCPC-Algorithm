@@ -1,0 +1,66 @@
+% CheatSheet.sty
+% <title>LaTeX style file for ACM-ICPC Cheat Sheet</title>
+% By Lodour (jjmangogao@gmail.com)
+% Version: 2017.11.5
+% LaTeX style file for ACM-ICPC Cheat Sheet.
+% load after article.cls
+
+% 中文显示
+\usepackage{xeCJK}
+\setCJKmainfont[
+    BoldFont=PingFang SC,
+    ItalicFont=PingFang SC,
+  ]{PingFang SC}
+%\setCJKsansfont{STHeiti}
+%\setCJKmonofont{STKaiti}
+
+% 数学公式扩展
+\usepackage{amsmath, amsthm}
+
+% 目录等级
+\usepackage{shorttoc}
+\setcounter{tocdepth}{3}
+
+% 代码高亮
+\usepackage{listings}
+\usepackage{xcolor}
+
+% 设置代码框样式
+\lstset{
+    frame=single, % 代码框架
+    breaklines=true, % 自动换行
+    tabsize=4, % Tab 大小
+    mathescape=true, % 数学模式
+    basicstyle=\ttfamily, % 基本字体样式
+    keywordstyle=\color{blue}, % 关键字颜色
+    commentstyle=\color{gray}, % 注释颜色
+    stringstyle=\color{green}, % 字符串颜色
+    showstringspaces=false, % 不显示空格
+    numbers=left, % 行号位置
+    numberstyle=\tiny, % 行号样式
+    stepnumber=1, % 行号间隔
+    numbersep=5pt % 行号间距
+}
+
+\renewcommand{\lstlistingname}{} % 默认是Listing
+
+% 页边距
+\usepackage{geometry}
+\geometry{bottom=1in, top=1in}
+\geometry{left=1.25in, right=1.25in}
+
+% 插入图片
+\usepackage{graphicx}
+
+% 环境定义
+\newtheorem{theorem}{定理}[section]
+\newtheorem{defination}{定义}[section]
+\newtheorem{corollary}{推论}[section]
+
+% 特殊命令
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% 名词翻译
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}
+\renewcommand{\contentsname}{目\qquad 录}
+\renewcommand\figurename{图}
